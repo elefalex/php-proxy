@@ -28,8 +28,10 @@ if(!function_exists('str_before')){
 	}
 }
 
-function is_html($content_type){
-	return clean_content_type($content_type) == 'text/html';
+if(!function_exists('is_html')){
+	function is_html($content_type){
+		return clean_content_type($content_type) == 'text/html';
+	}
 }
 
 function in_arrayi($needle, $haystack){
@@ -221,3 +223,4 @@ function rel2abs($rel, $base)
 }
 
 ?>
+
